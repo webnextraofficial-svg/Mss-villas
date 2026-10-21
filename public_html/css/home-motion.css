@@ -1,0 +1,32 @@
+/* Light motion for AP clone homepage */
+.page-home { --ease-out: cubic-bezier(0.16, 1, 0.3, 1); }
+
+.apc-hero-slide.is-active .apc-hero-copy {
+  animation: apc-rise .85s var(--ease-out) both;
+}
+
+@keyframes apc-rise {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: none; }
+}
+
+.gu-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .7s var(--ease-out), transform .7s var(--ease-out);
+}
+
+.gu-reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .apc-hero-slide.is-active .apc-hero-copy,
+  .gu-reveal {
+    animation: none;
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
