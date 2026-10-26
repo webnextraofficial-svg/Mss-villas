@@ -1,0 +1,13 @@
+# The website lives in public_html/ inside this repo. When the whole repo is
+# deployed to the hosting document root, serve every request from that folder
+# so tools/, the brochure PDF and other repo files are never reachable.
+DirectoryIndex index.html
+Options -Indexes
+
+RewriteEngine On
+
+RewriteCond %{THE_REQUEST} \s/+public_html/(\S*)\s [NC]
+RewriteRule ^ /%1 [R=301,L,NE]
+
+RewriteCond %{REQUEST_URI} !^/public_html/
+RewriteRule ^(.*)$ /public_html/$1 [L]
