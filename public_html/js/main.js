@@ -397,7 +397,7 @@
     });
   });
 
-  /* Lead submission → Google Apps Script (Sheet + email to Ghar Upgrade inboxes) */
+  /* Lead submission → Google Apps Script (Sheet + email to MSS Builders inboxes) */
   var LEAD_ENDPOINT =
     "https://script.google.com/macros/s/AKfycbwZsmVWXwgwKq6gJnGTGTtW1lYaoFq6JsgcUI5bjWahNHOfYF7CzaHQW-nEHi2f_on-/exec";
 
@@ -468,9 +468,6 @@
       err = emailError(data.email);
       if (err) return { field: "email", message: err };
     }
-    if (data.pincode && !/^[1-9]\d{5}$/.test(String(data.pincode).trim())) {
-      return { field: "pincode", message: "Enter a valid 6-digit pincode." };
-    }
     return null;
   }
 
@@ -501,15 +498,6 @@
     input.addEventListener("input", function () {
       var d = toIndianMobile(input.value);
       if (input.value !== d.slice(0, 10)) input.value = d.slice(0, 10);
-    });
-  });
-
-  document.querySelectorAll('input[name="pincode"]').forEach(function (input) {
-    input.setAttribute("inputmode", "numeric");
-    input.setAttribute("maxlength", "6");
-    input.addEventListener("input", function () {
-      var d = input.value.replace(/\D/g, "").slice(0, 6);
-      if (input.value !== d) input.value = d;
     });
   });
 
@@ -602,11 +590,6 @@
           reverseGeocode(lat, lng)
             .then(function (geo) {
               if (geo && geo.display_name) input.value = geo.display_name;
-              var postcode = geo && geo.address && String(geo.address.postcode || "").replace(/\s/g, "");
-              var pinInput = form.querySelector('input[name="pincode"]');
-              if (pinInput && !pinInput.value && /^[1-9]\d{5}$/.test(postcode || "")) {
-                pinInput.value = postcode;
-              }
               done("Location captured");
             })
             .catch(function () {
@@ -691,7 +674,7 @@
       .then(function () {
         rememberSubmission(mobile);
         status.textContent =
-          "Thank you! Our Ghar Upgrade team will contact you shortly.";
+          "Thank you! The MSS Grandeur team will contact you shortly.";
         form.reset();
         clearFormLocation(form);
         if (typeof onSuccess === "function") onSuccess();
@@ -810,67 +793,6 @@
       closeQuote();
     }
   });
-
-  /* Room details popup (interior design "Explore now") */
-  var roomModal = document.getElementById("room-modal");
-  var roomTitle = roomModal ? roomModal.querySelector("#room-modal-title") : null;
-  var roomTrigger = null;
-
-  function openRoom(room, trigger) {
-    if (!roomModal) return false;
-    var detail = roomModal.querySelector('.room-detail[data-room="' + room + '"]');
-    if (!detail) return false;
-    roomModal.querySelectorAll(".room-detail").forEach(function (el) {
-      el.hidden = el !== detail;
-    });
-    var card = trigger.closest("li");
-    var heading = card ? card.querySelector("h3") : null;
-    var title = detail.getAttribute("data-title") || (heading ? heading.textContent : "");
-    if (roomTitle && title) roomTitle.textContent = title;
-    roomTrigger = trigger;
-    roomModal.hidden = false;
-    document.body.classList.add("room-open");
-    setNavOpen(false);
-    var dialog = roomModal.querySelector(".room-modal-dialog");
-    if (dialog) dialog.scrollTop = 0;
-    var close = roomModal.querySelector("[data-close-room]:not(.quote-modal-backdrop)");
-    if (close) close.focus();
-    return true;
-  }
-
-  function closeRoom() {
-    if (!roomModal || roomModal.hidden) return;
-    roomModal.hidden = true;
-    document.body.classList.remove("room-open");
-    if (roomTrigger && typeof roomTrigger.focus === "function") roomTrigger.focus();
-  }
-
-  if (roomModal) {
-    document.addEventListener("click", function (e) {
-      var trigger = e.target.closest("[data-open-room]");
-      if (trigger) {
-        if (openRoom(trigger.getAttribute("data-open-room"), trigger)) e.preventDefault();
-        return;
-      }
-      if (e.target.closest("[data-close-room]")) {
-        e.preventDefault();
-        closeRoom();
-      }
-    });
-
-    // Capture phase: hide the room popup before the quote popup opens on top of it.
-    roomModal.addEventListener(
-      "click",
-      function (e) {
-        if (e.target.closest("[data-open-quote]")) closeRoom();
-      },
-      true
-    );
-
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" && !roomModal.hidden) closeRoom();
-    });
-  }
 
   document.querySelectorAll("[data-close-hero-form]").forEach(function (btn) {
     btn.addEventListener("click", function () {
@@ -1033,51 +955,6 @@
     });
   }
 
-  var wpConsult = document.getElementById("wp-consult-form");
-  var wpConsultStatus = document.getElementById("wp-consult-status");
-  if (wpConsult) {
-    wpConsult.addEventListener("submit", function (e) {
-      e.preventDefault();
-      submitLead(
-        wpConsult,
-        {
-          name: fieldVal(wpConsult, "name"),
-          phone: fieldVal(wpConsult, "phone"),
-          pincode: fieldVal(wpConsult, "pincode"),
-          address: fieldVal(wpConsult, "address"),
-          service: "Waterproofing",
-          need: fieldVal(wpConsult, "need"),
-          timeline: fieldVal(wpConsult, "timeline"),
-          painter: fieldVal(wpConsult, "painter"),
-          source: "waterproofing-consultation",
-        },
-        wpConsultStatus
-      );
-    });
-  }
-
-  var idConsult = document.getElementById("id-consult-form");
-  var idConsultStatus = document.getElementById("id-consult-status");
-  if (idConsult) {
-    idConsult.addEventListener("submit", function (e) {
-      e.preventDefault();
-      submitLead(
-        idConsult,
-        {
-          name: fieldVal(idConsult, "name"),
-          phone: fieldVal(idConsult, "phone"),
-          pincode: fieldVal(idConsult, "pincode"),
-          address: fieldVal(idConsult, "address"),
-          service: "Interior Design",
-          need: fieldVal(idConsult, "need"),
-          interest: fieldVal(idConsult, "interest"),
-          source: "interior-consultation",
-        },
-        idConsultStatus
-      );
-    });
-  }
-
   var contactForm = document.getElementById("contact-form");
   if (contactForm) {
     contactForm.addEventListener("submit", function (e) {
@@ -1088,6 +965,7 @@
         email: fieldVal(contactForm, "email"),
         locality: fieldVal(contactForm, "locality"),
         service: fieldVal(contactForm, "service"),
+        request_type: fieldVal(contactForm, "request_type"),
         message: fieldVal(contactForm, "message"),
         whatsapp: checkedVal(contactForm, "whatsapp"),
         source: "contact-form",
@@ -1095,40 +973,74 @@
     });
   }
 
-  /* Partner page: careers + vendor registration */
-  document.querySelectorAll("[data-partner-form]").forEach(function (form) {
+  /* Careers: Agent and Tele Caller applications */
+  document.querySelectorAll("[data-career-form]").forEach(function (form) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
-      var type = form.getAttribute("data-partner-form");
-      var data = {};
-      form.querySelectorAll("[name]").forEach(function (el) {
-        data[el.name] = el.value || "";
-      });
-      data.request_type = type === "vendor" ? "vendor" : "hiring";
-      data.service = type === "vendor" ? "Vendor registration" : "Job application";
-      data.source = "partner-" + data.request_type;
-      submitLead(form, data);
+      var role = form.getAttribute("data-role") || "Careers";
+      var languages = Array.prototype.map
+        .call(form.querySelectorAll('[name="languages"]:checked'), function (el) {
+          return el.value;
+        })
+        .join(", ");
+      var status = getLeadStatusEl(form);
+      var summary = [
+        ["Role", role],
+        ["Type", fieldVal(form, "partner_type")],
+        ["Qualification", fieldVal(form, "qualification")],
+        ["Experience", fieldVal(form, "experience")],
+        ["Languages", languages],
+        ["Availability", fieldVal(form, "availability")],
+      ]
+        .filter(function (pair) {
+          return pair[1];
+        })
+        .map(function (pair) {
+          return pair[0] + ": " + pair[1];
+        })
+        .join(" | ");
+      var note = fieldVal(form, "message").trim();
+      submitLead(
+        form,
+        {
+          name: fieldVal(form, "name"),
+          phone: fieldVal(form, "phone"),
+          email: fieldVal(form, "email"),
+          locality: fieldVal(form, "locality"),
+          service: "Job application – " + role,
+          request_type: "Career application",
+          role: role,
+          partner_type: fieldVal(form, "partner_type"),
+          qualification: fieldVal(form, "qualification"),
+          experience: fieldVal(form, "experience"),
+          languages: languages,
+          availability: fieldVal(form, "availability"),
+          message: summary + (note ? "\n" + note : ""),
+          whatsapp: checkedVal(form, "whatsapp"),
+          source: form.getAttribute("data-source") || "careers",
+        },
+        status,
+        function () {
+          status.textContent =
+            "Thank you for applying! The MSS Builders hiring team will call you shortly.";
+        }
+      );
     });
   });
 
-  /* Lead hero site-inspection forms */
+  /* Lead hero site-visit forms */
   document.querySelectorAll("[data-lead-form]").forEach(function (form) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
-      var service = form.getAttribute("data-service") || "Site inspection";
-      var timelineEl = form.querySelector('[name="timeline"]:checked');
-      var painterEl = form.querySelector('[name="painter"]:checked');
+      var service = form.getAttribute("data-service") || "Site visit";
       submitLead(form, {
         name: fieldVal(form, "name"),
         phone: fieldVal(form, "phone"),
         address: fieldVal(form, "address"),
-        pincode: fieldVal(form, "pincode"),
         service: service,
         need: fieldVal(form, "need"),
         whatsapp: checkedVal(form, "whatsapp"),
-        timeline: timelineEl ? timelineEl.value : "",
-        painter: painterEl ? painterEl.value : "",
-        source: "site-inspection-" + service.toLowerCase().replace(/\s+/g, "-"),
+        source: "site-visit-" + service.toLowerCase().replace(/[^a-z0-9]+/g, "-"),
       });
     });
   });
@@ -1153,26 +1065,6 @@
         }, 1600);
         var first = heroLeadForm.querySelector('[name="name"]');
         if (first) first.focus({ preventScroll: true });
-      });
-    });
-  }
-
-  /* Painting process tabs (legacy) */
-  var processTabs = document.querySelectorAll("[data-process-tab]");
-  if (processTabs.length) {
-    processTabs.forEach(function (tab) {
-      tab.addEventListener("click", function () {
-        var id = tab.getAttribute("data-process-tab");
-        processTabs.forEach(function (t) {
-          var on = t === tab;
-          t.classList.toggle("is-active", on);
-          t.setAttribute("aria-selected", on ? "true" : "false");
-        });
-        document.querySelectorAll("[data-process-panel]").forEach(function (panel) {
-          var show = panel.getAttribute("data-process-panel") === id;
-          if (show) panel.removeAttribute("hidden");
-          else panel.setAttribute("hidden", "");
-        });
       });
     });
   }

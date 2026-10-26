@@ -1,197 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://gharupgrade.com/</loc>
+    <loc>https://www.mssrealtors.com/</loc>
+    <lastmod>2026-10-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://gharupgrade.com/services/interior-design-solutions.html</loc>
+    <loc>https://www.mssrealtors.com/project.html</loc>
+    <lastmod>2026-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://gharupgrade.com/services/painting.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://gharupgrade.com/services/waterproofing-solutions.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://gharupgrade.com/services/ac-works.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://gharupgrade.com/contact.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://gharupgrade.com/partner.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://gharupgrade.com/why-choose.html</loc>
+    <loc>https://www.mssrealtors.com/about.html</loc>
+    <lastmod>2026-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://gharupgrade.com/blog.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://www.mssrealtors.com/contact.html</loc>
+    <lastmod>2026-10-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://gharupgrade.com/blog/2bhk-flat-painting-cost-hyderabad.html</loc>
-    <lastmod>2026-10-06</lastmod>
+    <loc>https://www.mssrealtors.com/careers.html</loc>
+    <lastmod>2026-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://gharupgrade.com/blog/interior-vs-exterior-painting.html</loc>
-    <lastmod>2026-10-01</lastmod>
+    <loc>https://www.mssrealtors.com/insights.html</loc>
+    <lastmod>2026-10-24</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://gharupgrade.com/blog/choose-house-painting-contractor-hyderabad.html</loc>
-    <lastmod>2026-09-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://gharupgrade.com/blog/best-paint-for-hyderabad-weather.html</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://gharupgrade.com/blog/fix-peeling-paint-damp-walls.html</loc>
-    <lastmod>2026-09-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://gharupgrade.com/blog/terrace-waterproofing-cost-hyderabad.html</loc>
-    <lastmod>2026-10-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://gharupgrade.com/blog/stop-terrace-rainwater-leakage.html</loc>
-    <lastmod>2026-10-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://gharupgrade.com/blog/damp-patches-interior-walls.html</loc>
-    <lastmod>2026-09-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://gharupgrade.com/blog/bathroom-waterproofing-problems-solutions.html</loc>
-    <lastmod>2026-09-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://gharupgrade.com/blog/repair-exterior-wall-cracks-leakage.html</loc>
-    <lastmod>2026-09-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://gharupgrade.com/blog/2bhk-interior-design-cost-hyderabad.html</loc>
-    <lastmod>2026-10-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://gharupgrade.com/blog/modular-kitchen-cost-materials-finishes.html</loc>
-    <lastmod>2026-09-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://gharupgrade.com/blog/modern-wardrobe-designs-small-bedrooms.html</loc>
-    <lastmod>2026-09-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://gharupgrade.com/blog/plan-home-interior-on-budget.html</loc>
-    <lastmod>2026-09-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://gharupgrade.com/blog/interior-design-ideas-hyderabad-apartments.html</loc>
-    <lastmod>2026-09-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://gharupgrade.com/blog/ac-service-cost-hyderabad-cleaning-vs-repair.html</loc>
-    <lastmod>2026-10-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://gharupgrade.com/blog/ac-not-cooling-properly.html</loc>
-    <lastmod>2026-10-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://gharupgrade.com/blog/how-often-service-home-ac.html</loc>
-    <lastmod>2026-09-28</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://gharupgrade.com/blog/split-ac-vs-central-ac-maintenance.html</loc>
-    <lastmod>2026-09-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://gharupgrade.com/blog/signs-ac-needs-professional-repair.html</loc>
-    <lastmod>2026-09-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://gharupgrade.com/blog/home-services-in-kukatpally.html</loc>
+    <loc>https://www.mssrealtors.com/insights/2-bhk-house-for-sale-in-anantapur.html</loc>
+    <lastmod>2026-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://gharupgrade.com/blog/home-services-in-secunderabad.html</loc>
+    <loc>https://www.mssrealtors.com/insights/duplex-house-for-sale-in-anantapur.html</loc>
+    <lastmod>2026-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://gharupgrade.com/blog/home-services-in-shamirpet.html</loc>
+    <loc>https://www.mssrealtors.com/insights/gated-community-homes-in-anantapur.html</loc>
+    <lastmod>2026-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://gharupgrade.com/blog/home-services-in-miyapur.html</loc>
+    <loc>https://www.mssrealtors.com/insights/east-facing-vs-west-facing-house-anantapur.html</loc>
+    <lastmod>2026-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://gharupgrade.com/blog/home-services-in-nizampet.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://gharupgrade.com/blog/home-services-in-gachibowli.html</loc>
+    <loc>https://www.mssrealtors.com/insights/living-near-rudrampet-bypass-road-anantapur.html</loc>
+    <lastmod>2026-10-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

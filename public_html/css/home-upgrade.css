@@ -1,5 +1,5 @@
 /* =========================================================
-   Ghar Upgrade — Asian Paints homepage clone
+   MSS Builders — homepage styles
    ========================================================= */
 
 .page-home {
@@ -1092,10 +1092,23 @@
 /* ---------- Footer ---------- */
 .page-ap .ap-footer.site-footer,
 .page-home footer.ap-footer {
-  background: #111827;
+  position: relative;
+  background:
+    radial-gradient(ellipse 55% 80% at 100% 0%, rgba(0, 96, 200, 0.28), transparent 60%),
+    radial-gradient(ellipse 45% 70% at 0% 100%, rgba(240, 120, 0, 0.12), transparent 60%),
+    #0a1a33;
   color: #f3f4f6;
   border-top: 0;
   padding: 0;
+}
+
+.page-ap .ap-footer.site-footer::before,
+.page-home footer.ap-footer::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 4px;
+  background: linear-gradient(90deg, #0060c8, #3fb0ff, #ffa800, #f07800);
 }
 
 .page-ap .ap-footer .ap-footer-grid {
@@ -1112,7 +1125,9 @@
 }
 
 .page-ap .ap-footer .footer-tagline {
-  color: #ff8a4c;
+  color: #ffffff;
+  font-weight: 800;
+  letter-spacing: 0.12em;
   margin: 0.85rem 0 0.65rem;
 }
 
@@ -1124,8 +1139,11 @@
 }
 
 .page-ap .ap-footer .footer-title {
-  color: #ff8a4c;
+  color: #ffffff;
   margin: 0 0 0.85rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 2px solid #ffa800;
+  width: fit-content;
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.1em;
@@ -1163,14 +1181,14 @@
   flex: 0 0 1.1rem;
   width: 1.1rem;
   text-align: center;
-  color: #ff8a4c;
+  color: #ffb547;
   font-size: 0.88rem;
   transition: transform 0.2s ease;
 }
 
 .page-ap .ap-footer .footer-links a:hover i {
   transform: translateX(2px);
-  color: #ffb087;
+  color: #ffffff;
 }
 
 .page-ap .ap-footer .footer-links a[aria-current="page"] {
@@ -1195,10 +1213,10 @@
 .page-ap .ap-footer .footer-map {
   border-radius: 0.75rem;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   aspect-ratio: 16 / 9;
   max-width: 22rem;
-  background: #1f2937;
+  background: #0f2547;
 }
 
 .page-ap .ap-footer .footer-map iframe {
@@ -1210,9 +1228,9 @@
 }
 
 .page-ap .ap-footer .footer-bottom {
-  background: #0b1220;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  color: rgba(255, 255, 255, 0.65);
+  background: #061226;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .page-ap .ap-footer .footer-bottom-inner {
@@ -1231,23 +1249,33 @@
 
 .page-ap .ap-footer .footer-bottom-inner p {
   margin: 0;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .page-ap .ap-footer .footer-bottom-inner > a {
-  color: #ff8a4c;
+  color: #ffffff;
+  background: #f07800;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
   font-weight: 700;
   text-decoration: none;
+  transition: background 0.2s ease;
 }
 
 .page-ap .ap-footer .footer-bottom-inner > a:hover {
-  color: #ffb087;
+  background: #d96a00;
+}
+
+.page-ap .ap-footer .social-link:hover {
+  color: #ffffff;
+  border-color: #f07800;
+  background: #f07800;
 }
 
 .page-ap .ap-footer .footer-credit {
   margin: 0;
   font-size: 0.82rem;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.7);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -1556,4 +1584,187 @@
 @keyframes apc-form-float-in {
   from { opacity: 0; transform: translateX(1.5rem); }
   to { opacity: 1; transform: none; }
+}
+
+/* ---------- Insights ---------- */
+.page-insights .blog-grid { align-items: stretch; }
+.page-insights .blog-card { height: 100%; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.page-insights .blog-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.page-insights .blog-meta span,
+.page-insights .blog-card-more,
+.page-insights .post-related a span { color: #0060c8; }
+.page-insights .post-hero { background: #eef7f1; }
+.page-insights .post-meta { margin: 0.9rem 0 0; }
+.page-insights .post-crumbs a:hover,
+.page-insights .post-body a { color: #0060c8; }
+.page-insights .post-body li::marker { color: #f07800; }
+.page-insights .post-related a:hover { border-color: #0060c8; }
+.page-insights .post-cover .img-rights { position: absolute; right: 0.75rem; top: 0.75rem; }
+.page-insights .post-cta { background: #0a1a33; border-left: 4px solid #f07800; }
+.page-insights .post-faq { margin-top: 2.25rem; }
+.page-insights .post-body table {
+  width: 100%;
+  margin: 0 0 1.25rem;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.page-insights .post-body th,
+.page-insights .post-body td {
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--line);
+  text-align: left;
+}
+.page-insights .post-body thead th { background: #0a1a33; color: #fff; }
+.page-insights .post-body tbody tr:nth-child(even) { background: #f5f8fc; }
+@media (max-width: 720px) {
+  .page-insights .post-body table { font-size: 0.85rem; }
+  .page-insights .post-body th,
+  .page-insights .post-body td { padding: 0.5rem; }
+}
+
+/* ---------- Track record (completed projects) ---------- */
+.mss-track { padding: clamp(2.5rem, 6vw, 4rem) 0; background: #f4faf6; }
+.mss-track .wrap { max-width: var(--max, 78rem); margin-inline: auto; padding-inline: clamp(1.25rem, 4vw, 2rem); }
+.mss-track-head {
+  display: flex;
+  align-items: center;
+  gap: clamp(1.25rem, 4vw, 2.5rem);
+  margin-bottom: 1.75rem;
+}
+.mss-track-head h2 { margin: 0 0 0.4rem; font-size: clamp(1.5rem, 3vw, 2rem); }
+.mss-track-head p { margin: 0; color: var(--muted, #555); max-width: 40rem; line-height: 1.6; }
+.mss-track-years {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 1rem 1.25rem;
+  border-radius: 1rem;
+  background: #007838;
+  color: #fff;
+}
+.mss-track-years strong { font-size: 3rem; line-height: 1; font-weight: 800; color: #fff; -webkit-text-fill-color: #fff; background: none; opacity: 1; }
+.mss-track-years span { font-size: 0.85rem; font-weight: 700; line-height: 1.3; text-transform: uppercase; letter-spacing: 0.04em; color: #fff; }
+.mss-track-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.mss-track-grid li {
+  padding: 1.15rem 1.2rem;
+  border: 1px solid #d6eadc;
+  border-top: 4px solid #007838;
+  border-radius: 0.9rem;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+}
+.mss-track-badge {
+  display: inline-block;
+  margin-bottom: 0.6rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: #e3f3e8;
+  color: #007838;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.mss-track-grid h3 { margin: 0 0 0.4rem; font-size: 1.08rem; }
+.mss-track-grid p { display: flex; gap: 0.45rem; margin: 0; color: var(--muted, #555); font-size: 0.92rem; }
+.mss-track-grid p i { margin-top: 0.2rem; color: #ed1c24; }
+@media (max-width: 980px) {
+  .mss-track-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .mss-track-head { flex-direction: column; align-items: flex-start; }
+  .mss-track-grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- About page ---------- */
+.page-about .wrap { max-width: var(--max, 78rem); margin-inline: auto; padding-inline: clamp(1.25rem, 4vw, 2rem); }
+.mss-about-story { padding: clamp(2.5rem, 6vw, 4rem) 0; }
+.mss-about-story-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+}
+.mss-about-story h2 { margin: 0 0 0.9rem; font-size: clamp(1.5rem, 3vw, 2rem); }
+.mss-about-story p { margin: 0 0 1rem; line-height: 1.75; color: var(--muted, #555); }
+.mss-about-story a { color: #007838; font-weight: 700; }
+.mss-about-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.mss-about-stats li {
+  padding: 1.15rem 1rem;
+  border-radius: 1rem;
+  background: #f4faf6;
+  border: 1px solid #d6eadc;
+  text-align: center;
+}
+.mss-about-stats strong { display: block; font-size: 2rem; line-height: 1.1; font-weight: 800; color: #007838; }
+.mss-about-stats span { display: block; margin-top: 0.3rem; font-size: 0.85rem; font-weight: 600; color: var(--muted, #555); }
+.mss-about-values { padding: clamp(2.5rem, 6vw, 4rem) 0; }
+.mss-about-values h2 { margin: 0 0 1.5rem; font-size: clamp(1.5rem, 3vw, 2rem); text-align: center; }
+.mss-about-values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.mss-about-values-grid li {
+  padding: 1.35rem 1.2rem;
+  border: 1px solid var(--line, #e8e8e8);
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+}
+.mss-about-values-grid i {
+  display: grid;
+  place-items: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  margin-bottom: 0.8rem;
+  border-radius: 0.75rem;
+  background: #e3f3e8;
+  color: #007838;
+  font-size: 1.1rem;
+}
+.mss-about-values-grid h3 { margin: 0 0 0.4rem; font-size: 1.05rem; }
+.mss-about-values-grid p { margin: 0; font-size: 0.92rem; line-height: 1.6; color: var(--muted, #555); }
+.mss-about-current { padding: 0 0 clamp(2.5rem, 6vw, 4rem); }
+.mss-about-current-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border-radius: 1.25rem;
+  background: #f4faf6;
+}
+.mss-about-current figure { margin: 0; overflow: hidden; border-radius: 1rem; }
+.mss-about-current img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+.mss-about-current h2 { margin: 0.4rem 0 0.75rem; font-size: clamp(1.4rem, 3vw, 1.9rem); }
+.mss-about-current p { line-height: 1.7; color: var(--muted, #555); }
+.mss-about-actions { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.1rem; }
+@media (max-width: 980px) {
+  .mss-about-story-grid,
+  .mss-about-current-grid { grid-template-columns: 1fr; }
+  .mss-about-values-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  .mss-about-values-grid { grid-template-columns: 1fr; }
 }

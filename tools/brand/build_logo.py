@@ -1,4 +1,4 @@
-"""Generate site logo + favicons from tools/brand/logo-source.jpg.
+"""Generate site logo + favicons from tools/brand/logo-source.png (MSS Builders).
 
 Run: python3 tools/brand/build_logo.py
 """
@@ -13,9 +13,9 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent.parent / "public_html"
 ASSETS = ROOT / "assets"
 
-SRC = HERE / "logo-source.jpg"
-MARK_BOX = (138, 88, 832, 616)       # GU mark
-WORDMARK_BOX = (40, 637, 984, 749)   # "GHAR UPGRADE"
+SRC = HERE / "logo-source.png"
+MARK_BOX = (300, 118, 720, 455)      # building mark
+WORDMARK_BOX = (280, 455, 740, 632)  # "MSS Builders / MARK OF QUALITY" with rules
 
 
 def knock_out_white(img: Image.Image, soft: int = 70) -> Image.Image:
@@ -45,20 +45,19 @@ def main() -> None:
     mark = trim(knock_out_white(src.crop(MARK_BOX)))
     word = trim(knock_out_white(src.crop(WORDMARK_BOX)))
 
-    # Horizontal header logo (2x of the 240x45 slot)
+    # Horizontal header logo (2x of the header slot)
     height = 280
-    mark_h = height
-    mark_r = mark.resize((round(mark.width * mark_h / mark.height), mark_h), Image.LANCZOS)
-    word_h = 112
+    mark_r = mark.resize((round(mark.width * height / mark.height), height), Image.LANCZOS)
+    word_h = 250
     word_r = word.resize((round(word.width * word_h / word.height), word_h), Image.LANCZOS)
-    gap = 44
+    gap = 48
     logo = Image.new("RGBA", (mark_r.width + gap + word_r.width, height), (0, 0, 0, 0))
     logo.paste(mark_r, (0, 0), mark_r)
     logo.paste(word_r, (mark_r.width + gap, (height - word_h) // 2), word_r)
-    logo.save(ASSETS / "ghar-upgrade-logo.png", optimize=True)
+    logo.save(ASSETS / "mss-builders-logo.png", optimize=True)
 
     # Full stacked logo (as supplied) for social / print use
-    src.convert("RGB").save(ASSETS / "ghar-upgrade-logo-full.jpg", quality=90, optimize=True)
+    src.convert("RGB").save(ASSETS / "mss-builders-logo-full.jpg", quality=90, optimize=True)
 
     icon = square(mark)
     icon.resize((32, 32), Image.LANCZOS).save(ASSETS / "favicon-32.png", optimize=True)
