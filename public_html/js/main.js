@@ -4,6 +4,32 @@
   var year = document.getElementById("year");
   if (year) year.textContent = String(new Date().getFullYear());
 
+  /* Footer background video: load only on larger screens once the footer is near view */
+  var footerVideo = document.querySelector(".footer-video video[data-src]");
+  if (
+    footerVideo &&
+    "IntersectionObserver" in window &&
+    window.matchMedia("(min-width: 768px)").matches &&
+    !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  ) {
+    footerVideo.addEventListener("playing", function () {
+      footerVideo.classList.add("is-playing");
+    });
+    var footerVideoObs = new IntersectionObserver(
+      function (entries) {
+        if (entries[0].isIntersecting) {
+          if (!footerVideo.src) footerVideo.src = footerVideo.getAttribute("data-src");
+          var p = footerVideo.play();
+          if (p && p.catch) p.catch(function () {});
+        } else if (footerVideo.src) {
+          footerVideo.pause();
+        }
+      },
+      { rootMargin: "300px 0px" }
+    );
+    footerVideoObs.observe(footerVideo);
+  }
+
   var toggle = document.querySelector(".nav-toggle");
   var closeBtn = document.querySelector(".nav-close");
   var backdrop = document.getElementById("nav-backdrop");

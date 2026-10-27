@@ -28,7 +28,7 @@ def set_active(page, href):
             1,
         )
         page = re.sub(
-            rf'(<ul class="footer-links">(?:(?!</ul>).)*?<li><a href="{re.escape(href)}")',
+            rf'(<ul class="pg-footer-links">(?:(?!</ul>).)*?<li><a href="{re.escape(href)}")',
             r'\1 aria-current="page"',
             page,
             count=1,
@@ -56,7 +56,7 @@ CAREERS_MAIN = """
       <div class="wrap page-hero-inner">
         <p class="eyebrow">Careers</p>
         <h1>We’re hiring at MSS Builders</h1>
-        <p class="page-hero-lead">Join the team behind MSS <span class="mss-script">Grandeur</span> in <strong>Anantapur, Andhra Pradesh</strong>. We’re looking for Channel Partners and Tele Callers.</p>
+        <p class="page-hero-lead">Join the team behind MSS <span class="mss-balaji">Balaji</span> <span class="mss-script">Grandeur</span> in <strong>Anantapur, Andhra Pradesh</strong>. We’re looking for Channel Partners and Tele Callers.</p>
       </div>
     </section>
 

@@ -11,14 +11,16 @@ ASSETS = HERE.parent.parent / "public_html" / "assets"
 FONTS = HERE / "fonts"
 
 W, H = 1024, 576
-INK = (26, 26, 26)
+INK = (16, 29, 50)
 GREY = (85, 85, 85)
+NAVY = (16, 29, 50)
+GOLD = (198, 166, 107)
 
 CARDS = [
-    ("mss-card-2bhk.jpg", "mss-2bhk-home.jpg", "2 BHK Homes", "₹64 Lakhs · Prices negotiable", (30, 111, 217), (11, 47, 107), "house"),
-    ("mss-card-duplex.jpg", "mss-duplex-villa.jpg", "Duplex Homes", "₹81 Lakhs · Prices negotiable", (255, 138, 26), (214, 72, 30), "duplex"),
-    ("mss-card-gated.jpg", "mss-gated-entrance.jpg", "Gated Community", "40 FT CC roads · 24/7 security", (31, 157, 85), (16, 110, 58), "shield"),
-    ("mss-card-clubhouse.jpg", "mss-clubhouse.jpg", "Clubhouse", "Leisure for the whole family", (214, 37, 96), (150, 20, 70), "club"),
+    ("mss-card-2bhk.jpg", "mss-2bhk-home.jpg", "2 BHK Homes", "₹64 Lakhs · Prices negotiable", GOLD, NAVY, "house"),
+    ("mss-card-duplex.jpg", "mss-duplex-villa.jpg", "Duplex Homes", "₹81 Lakhs · Prices negotiable", GOLD, NAVY, "duplex"),
+    ("mss-card-gated.jpg", "mss-gated-entrance.jpg", "Gated Community", "40 FT CC roads · 24/7 security", GOLD, NAVY, "shield"),
+    ("mss-card-clubhouse.jpg", "mss-clubhouse.jpg", "Clubhouse", "Leisure for the whole family", GOLD, NAVY, "club"),
 ]
 
 
