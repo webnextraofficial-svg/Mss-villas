@@ -5791,6 +5791,7 @@ ol.bh-journey li:hover .bh-journey-icon {
 .bh-compare--market thead th:nth-child(2),
 .bh-compare--market thead th:nth-child(3) {
   background: #5b6575;
+  text-align: left;
 }
 
 .bh-compare--market thead th:nth-child(4) {
@@ -9038,16 +9039,21 @@ body.nav-open .quote-tab.btn {
 
 /* Partner strip above the header (all pages) */
 .partner-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.75rem;
+  row-gap: 0.2rem;
+  min-height: 2.1rem;
+  padding: 0.3rem 1rem;
   background: linear-gradient(90deg, #0B1626 0%, #243653 55%, #0B1626 100%);
   border-bottom: 2px solid #B8935A;
 }
 .partner-strip a {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
   gap: 0.5rem;
-  min-height: 2.1rem;
-  padding: 0.3rem 1rem;
   color: #fff;
   font-size: 0.8rem;
   font-weight: 500;
@@ -9058,7 +9064,14 @@ body.nav-open .quote-tab.btn {
 .partner-strip a:hover { color: #fff; }
 .partner-strip svg { flex: none; color: #B8935A; }
 .partner-strip strong { font-weight: 800; color: #B8935A; }
-.partner-strip-cta {
+.partner-strip a.partner-strip-call {
+  gap: 0.35rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+.partner-strip a.partner-strip-call:hover { color: #B8935A; }
+.partner-strip a.partner-strip-cta {
   flex: none;
   padding: 0.15rem 0.65rem;
   border-radius: 999px;
@@ -9067,8 +9080,8 @@ body.nav-open .quote-tab.btn {
   font-weight: 700;
   font-size: 0.74rem;
 }
-.partner-strip a:hover .partner-strip-cta { background: #B8935A; }
 @media (max-width: 640px) {
+  .partner-strip { column-gap: 0.55rem; padding-inline: 0.6rem; }
   .partner-strip-sub { display: none; }
 }
 

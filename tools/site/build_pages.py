@@ -72,7 +72,7 @@ CAREERS_MAIN = """
                   <p class="career-role-type">Partnership · Anantapur</p>
                 </div>
               </div>
-              <p>Work with MSS Builders to connect homebuyers with MSS Grandeur — 2 BHK homes (₹64 Lakhs) and duplex homes (₹81 Lakhs) in a gated community.</p>
+              <p>Work with MSS Builders to connect homebuyers with MSS Balaji Grandeur — 2 BHK homes (₹64 Lakhs) and duplex homes (₹81 Lakhs) in a gated community.</p>
               <ul>
                 <li>Real estate agents, brokers and consultants</li>
                 <li>People with a strong local network in and around Anantapur</li>
@@ -88,7 +88,7 @@ CAREERS_MAIN = """
                   <p class="career-role-type">Sales support · Anantapur</p>
                 </div>
               </div>
-              <p>Call and follow up with homebuyer enquiries, share project details and schedule site visits to MSS Grandeur.</p>
+              <p>Call and follow up with homebuyer enquiries, share project details and schedule site visits to MSS Balaji Grandeur.</p>
               <ul>
                 <li>Clear, polite communication on the phone</li>
                 <li>Comfortable following up with leads every day</li>
@@ -140,7 +140,7 @@ CAREERS_MAIN = """
             </label>
 
             <button class="btn btn-accent btn-lg contact-submit" type="submit">Apply Now</button>
-            <p class="form-hint" data-lead-status role="status" aria-live="polite">Prefer to talk? Call <a href="tel:+919297975656">92979 75656</a>.</p>
+            <p class="form-hint" data-lead-status role="status" aria-live="polite">Prefer to talk? Call <a href="tel:+917337575162">73375 75162</a>.</p>
           </form>
         </div>
       </div>
@@ -155,7 +155,7 @@ def main():
     (SITE / "careers.html").write_text(render(
         template,
         title="Careers | Channel Partner & Tele Caller Jobs — MSS Builders, Anantapur",
-        description="MSS Builders is hiring Channel Partners and Tele Callers in Anantapur for MSS Grandeur. Apply online or call 92979 75656.",
+        description="MSS Builders is hiring Channel Partners and Tele Callers in Anantapur for MSS Balaji Grandeur. Apply online or call 73375 75162.",
         body_class="page-contact page-careers",
         main=CAREERS_MAIN,
         active="careers.html",

@@ -70,7 +70,7 @@ def card(post: dict, prefix: str) -> str:
 
 def build_index(head: str, tail: str) -> None:
     title = "Insights | Home Buying in Anantapur — MSS Builders"
-    description = "Guides for home buyers in Anantapur: 2 BHK and duplex houses, gated communities, Vastu and house facing, and living near Rudrampet Bypass Road."
+    description = "Guides for home buyers in Anantapur: 2 BHK and duplex houses, gated communities, Vastu and house facing, and living on Kalyandurgam Road."
     url = f"{SITE}/insights.html"
     ld = {
         "@context": "https://schema.org",
@@ -167,7 +167,7 @@ def build_post(head: str, tail: str, post: dict) -> None:
 
         <aside class="post-cta">
           <div>
-            <h2>See MSS Grandeur in person</h2>
+            <h2>See MSS Balaji Grandeur in person</h2>
             <p>2 BHK homes from ₹64 Lakhs and duplex homes from ₹81 Lakhs in Anantapur — prices negotiable.</p>
           </div>
           <div class="post-cta-actions">

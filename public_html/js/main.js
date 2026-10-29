@@ -700,7 +700,7 @@
       .then(function () {
         rememberSubmission(mobile);
         status.textContent =
-          "Thank you! The MSS Grandeur team will contact you shortly.";
+          "Thank you! The MSS Balaji Grandeur team will contact you shortly.";
         form.reset();
         clearFormLocation(form);
         if (typeof onSuccess === "function") onSuccess();

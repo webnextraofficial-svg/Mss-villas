@@ -9,5 +9,7 @@ RewriteEngine On
 RewriteCond %{THE_REQUEST} \s/+public_html/(\S*)\s [NC]
 RewriteRule ^ /%1 [R=301,L,NE]
 
+RewriteRule ^(?:public_html/)?insights/living-near-rudrampet-bypass-road-anantapur\.html$ /insights/living-near-kalyandurgam-road-anantapur.html [R=301,L]
+
 RewriteCond %{REQUEST_URI} !^/public_html/
 RewriteRule ^(.*)$ /public_html/$1 [L]

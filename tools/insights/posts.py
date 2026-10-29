@@ -1,6 +1,6 @@
 """Insights articles for Anantapur home buyers.
 
-Facts about MSS Grandeur come from the project brochure
+Facts about MSS Balaji Grandeur come from the project brochure
 ("brochure 21st july 2026 Green colour.pdf"); keep them in sync with it.
 """
 
@@ -15,7 +15,7 @@ POSTS = [
         "meta": "Looking for a 2 BHK house for sale in Anantapur? Compare sizes, prices, specifications and documents to check before you buy an independent 2 BHK home.",
         "lead": "Buying your first independent house in Anantapur? Here is what to look for in a 2 BHK home — size, budget, build quality, approvals and the costs people often forget.",
         "image": "mss-2bhk-home.jpg",
-        "image_alt": "East-facing 2 BHK independent house at MSS Grandeur, Anantapur",
+        "image_alt": "East-facing 2 BHK independent house at MSS Balaji Grandeur, Anantapur",
         "read": 6,
         "body": """
 <p>For many families in Anantapur, a 2 BHK independent house is the first big step from renting to owning. It gives you your own plot, your own parking and space to grow — without the cost of a larger duplex. But not every 2 BHK is the same. This guide walks through what to check so you buy with confidence.</p>
@@ -27,7 +27,7 @@ POSTS = [
   <li><strong>Plinth area</strong> tells you how much covered living space you are actually paying for.</li>
   <li>Check the room sizes on the floor plan — especially the living-and-dining hall, which is where a family spends most of the day.</li>
 </ul>
-<p>At <a href="{root}project.html">MSS Grandeur</a>, for example, 2 BHK homes sit on a 29′ × 45′ plot with a ground-floor plinth area of 1,008 sq ft, and include covered car parking inside the compound.</p>
+<p>At <a href="{root}project.html">MSS Balaji Grandeur</a>, for example, 2 BHK homes sit on a 29′ × 45′ plot with a ground-floor plinth area of 1,008 sq ft, and include covered car parking inside the compound.</p>
 
 <h2>2. Know your budget — including the hidden costs</h2>
 <p>The quoted price is rarely the final amount. Before you commit, add up:</p>
@@ -38,7 +38,7 @@ POSTS = [
   <li>Furniture, curtains, lights and kitchen appliances</li>
   <li>Home loan processing fees, if you are taking a loan</li>
 </ul>
-<p>Ask the builder which of these are included and which are “to be borne by the purchaser”. A good builder will tell you clearly. 2 BHK homes at MSS Grandeur are priced at <strong>₹64 Lakhs</strong>, and prices are negotiable.</p>
+<p>Ask the builder which of these are included and which are “to be borne by the purchaser”. A good builder will tell you clearly. 2 BHK homes at MSS Balaji Grandeur are priced at <strong>₹64 Lakhs</strong>, and prices are negotiable.</p>
 
 <h2>3. Look closely at the specifications</h2>
 <p>Specifications are where quality shows up — or where corners get cut. Ask for a written specification sheet and compare it across projects. Things worth checking:</p>
@@ -60,7 +60,7 @@ POSTS = [
   <li>Encumbrance certificate (EC) showing the property is free of loans or disputes</li>
   <li>Property tax and utility details</li>
 </ol>
-<p>If you are taking a home loan, your bank will also check these documents — but it is better to know yourself before you pay anything. MSS Grandeur is an <strong>AHUDA-approved layout</strong>.</p>
+<p>If you are taking a home loan, your bank will also check these documents — but it is better to know yourself before you pay anything. MSS Balaji Grandeur is an <strong>AHUDA-approved layout</strong>.</p>
 
 <h2>5. Visit the site — more than once</h2>
 <p>Photos and brochures help, but nothing replaces walking the site. Visit once during the day and once in the evening. Check the road width, street lighting, drainage, how far the nearest school, hospital and supermarket are, and how the neighbourhood feels. Talk to people who already live nearby.</p>
@@ -69,9 +69,9 @@ POSTS = [
 <p>A 2 BHK independent house suits young families, couples, and parents who want a comfortable home without stairs. If you expect your family to grow, or you want a separate floor for parents or guests, compare it with a <a href="{root}insights/duplex-house-for-sale-in-anantapur.html">duplex home</a> before you decide.</p>
 """,
         "faq": [
-            ("What is the price of a 2 BHK house at MSS Grandeur, Anantapur?",
-             "2 BHK homes at MSS Grandeur are priced at ₹64 Lakhs, and prices are negotiable. Call 92979 75656 to discuss."),
-            ("What size is a 2 BHK home at MSS Grandeur?",
+            ("What is the price of a 2 BHK house at MSS Balaji Grandeur, Anantapur?",
+             "2 BHK homes at MSS Balaji Grandeur are priced at ₹64 Lakhs, and prices are negotiable. Call 92979 75656 to discuss."),
+            ("What size is a 2 BHK home at MSS Balaji Grandeur?",
              "Each 2 BHK home sits on a 29′ × 45′ plot with a ground-floor plinth area of 1,008 sq ft, in both east-facing and west-facing options."),
             ("Which documents should I check before buying a house in Anantapur?",
              "Check the layout approval (AHUDA), building permission, title and link documents, the encumbrance certificate and property tax records before paying an advance."),
@@ -81,10 +81,10 @@ POSTS = [
         "slug": "duplex-house-for-sale-in-anantapur",
         "category": "Buyer's guide",
         "title": "Duplex House for Sale in Anantapur: Is a Duplex Right for Your Family?",
-        "meta": "Thinking of buying a duplex house in Anantapur? Learn the benefits of duplex living, typical sizes, what ₹81 Lakhs gets you at MSS Grandeur and how it compares with a 2 BHK.",
+        "meta": "Thinking of buying a duplex house in Anantapur? Learn the benefits of duplex living, typical sizes, what ₹81 Lakhs gets you at MSS Balaji Grandeur and how it compares with a 2 BHK.",
         "lead": "A duplex gives you two floors of living space on your own plot. Here is how to decide whether a duplex house in Anantapur fits your family — and what to check before you buy.",
         "image": "mss-duplex-villa.jpg",
-        "image_alt": "East-facing duplex house at MSS Grandeur, Anantapur",
+        "image_alt": "East-facing duplex house at MSS Balaji Grandeur, Anantapur",
         "read": 6,
         "body": """
 <p>Duplex homes have become a popular choice for families in Anantapur who want more space without moving far from the city. With living areas on the ground floor and bedrooms spread across two levels, a duplex feels like a private villa — but on a plot size that is still practical to maintain.</p>
@@ -101,7 +101,7 @@ POSTS = [
 </ul>
 
 <h2>What size should you look for?</h2>
-<p>Always compare the <strong>ground floor</strong>, <strong>first floor</strong> and <strong>total</strong> plinth area. At <a href="{root}project.html">MSS Grandeur</a>, duplex homes are built on a 29′ × 45′ plot with a total area of <strong>1,484 sq ft</strong>:</p>
+<p>Always compare the <strong>ground floor</strong>, <strong>first floor</strong> and <strong>total</strong> plinth area. At <a href="{root}project.html">MSS Balaji Grandeur</a>, duplex homes are built on a 29′ × 45′ plot with a total area of <strong>1,484 sq ft</strong>:</p>
 <ul>
   <li><strong>East-facing duplex:</strong> 832 sq ft on the ground floor and 652 sq ft on the first floor</li>
   <li><strong>West-facing duplex:</strong> 843 sq ft on the ground floor and 641 sq ft on the first floor</li>
@@ -112,14 +112,14 @@ POSTS = [
 <table>
   <thead><tr><th></th><th>2 BHK (single floor)</th><th>Duplex (two floors)</th></tr></thead>
   <tbody>
-    <tr><td>Price at MSS Grandeur</td><td>₹64 Lakhs</td><td>₹81 Lakhs</td></tr>
+    <tr><td>Price at MSS Balaji Grandeur</td><td>₹64 Lakhs</td><td>₹81 Lakhs</td></tr>
     <tr><td>Plot size</td><td>29′ × 45′</td><td>29′ × 45′</td></tr>
     <tr><td>Built-up area</td><td>1,008 sq ft</td><td>1,484 sq ft</td></tr>
     <tr><td>Stairs</td><td>None</td><td>Internal staircase</td></tr>
     <tr><td>Best for</td><td>Small families, elders</td><td>Growing or joint families</td></tr>
   </tbody>
 </table>
-<p>Prices at MSS Grandeur are negotiable for both options.</p>
+<p>Prices at MSS Balaji Grandeur are negotiable for both options.</p>
 
 <h2>What to check before buying a duplex</h2>
 <ol>
@@ -131,12 +131,12 @@ POSTS = [
 </ol>
 
 <h2>See a duplex before you decide</h2>
-<p>The best way to judge a duplex is to walk through it — climb the stairs, stand on the balcony and check the light in each room. Book a site visit to MSS Grandeur and our team will show you both the duplex and 2 BHK options.</p>
+<p>The best way to judge a duplex is to walk through it — climb the stairs, stand on the balcony and check the light in each room. Book a site visit to MSS Balaji Grandeur and our team will show you both the duplex and 2 BHK options.</p>
 """,
         "faq": [
-            ("What is the price of a duplex house at MSS Grandeur, Anantapur?",
-             "Duplex homes at MSS Grandeur are priced at ₹81 Lakhs, and prices are negotiable."),
-            ("What is the total area of a duplex at MSS Grandeur?",
+            ("What is the price of a duplex house at MSS Balaji Grandeur, Anantapur?",
+             "Duplex homes at MSS Balaji Grandeur are priced at ₹81 Lakhs, and prices are negotiable."),
+            ("What is the total area of a duplex at MSS Balaji Grandeur?",
              "Each duplex has a total plinth area of 1,484 sq ft on a 29′ × 45′ plot, available in east-facing and west-facing options."),
             ("Is a duplex better than a 2 BHK?",
              "A duplex suits growing or joint families who want more space and privacy. A single-floor 2 BHK suits smaller families and elders who prefer no stairs."),
@@ -160,14 +160,14 @@ POSTS = [
 <h2>2. Wide internal roads and planned infrastructure</h2>
 <p>In a planned layout, roads, drainage and power lines are designed before the houses are built. Things worth checking:</p>
 <ul>
-  <li><strong>Road width:</strong> wide CC (cement concrete) roads — such as the 40 ft roads at MSS Grandeur — make it easy to drive, park and walk.</li>
+  <li><strong>Road width:</strong> wide CC (cement concrete) roads — such as the 40 ft roads at MSS Balaji Grandeur — make it easy to drive, park and walk.</li>
   <li><strong>Underground drainage:</strong> no open drains along the street.</li>
   <li><strong>Underground electricity and street lights:</strong> safer, neater streets at night.</li>
   <li><strong>Water supply:</strong> an overhead tank for the layout plus individual tanks for each house.</li>
 </ul>
 
 <h2>3. Amenities close to home</h2>
-<p>Shared amenities let your family enjoy facilities that would be expensive to build on a single plot. The MSS Grandeur layout plan includes:</p>
+<p>Shared amenities let your family enjoy facilities that would be expensive to build on a single plot. The MSS Balaji Grandeur layout plan includes:</p>
 <ul>
   <li>A clubhouse with a gym, yoga hall, indoor games, library, conference hall and guest rooms</li>
   <li>A swimming pool</li>
@@ -180,7 +180,7 @@ POSTS = [
 <p>Gated communities tend to bring together families at a similar stage of life. Children find friends nearby, festivals are celebrated together, and there is usually a residents' group that looks after common areas.</p>
 
 <h2>5. Approvals are easier to verify</h2>
-<p>In a single approved layout, every plot shares the same layout approval, which makes checking documents simpler for buyers and banks. In Anantapur, look for layouts approved by <strong>AHUDA</strong>. MSS Grandeur is an AHUDA-approved layout.</p>
+<p>In a single approved layout, every plot shares the same layout approval, which makes checking documents simpler for buyers and banks. In Anantapur, look for layouts approved by <strong>AHUDA</strong>. MSS Balaji Grandeur is an AHUDA-approved layout.</p>
 
 <h2>6. A builder with a track record</h2>
 <p>A gated community is only as good as the people who build it. Look for a builder whose earlier projects you can visit. MSS Builders has been building in Anantapur for 15 years, with four completed communities: Balaji Villas Phase 1 (Kalyandurgam Road), Balaji Villas Phase 2 (SK University Road), and MSS Balaji Grandeur 1 and 2 (Aravakuru).</p>
@@ -193,15 +193,15 @@ POSTS = [
   <li>How wide are the internal roads, and are drainage and electricity underground?</li>
   <li>Is the layout approved, and can I see the approval copy?</li>
 </ol>
-<p>Want to see a gated community in Anantapur for yourself? <a href="{root}contact.html">Contact us</a> to plan a visit to MSS Grandeur.</p>
+<p>Want to see a gated community in Anantapur for yourself? <a href="{root}contact.html">Contact us</a> to plan a visit to MSS Balaji Grandeur.</p>
 """,
         "faq": [
-            ("Is MSS Grandeur a gated community?",
-             "Yes. MSS Grandeur is a gated community in Anantapur with an entrance arch, 40 ft CC roads, a clubhouse and planned amenities."),
-            ("What amenities does MSS Grandeur offer?",
+            ("Is MSS Balaji Grandeur a gated community?",
+             "Yes. MSS Balaji Grandeur is a gated community in Anantapur with an entrance arch, 40 ft CC roads, a clubhouse and planned amenities."),
+            ("What amenities does MSS Balaji Grandeur offer?",
              "The layout plan includes a clubhouse with gym, yoga hall, indoor games, library and guest rooms, plus a swimming pool, basketball court, children's play area, parks and avenue plantations."),
-            ("Is MSS Grandeur an approved layout?",
-             "Yes. MSS Grandeur is an AHUDA-approved layout."),
+            ("Is MSS Balaji Grandeur an approved layout?",
+             "Yes. MSS Balaji Grandeur is an AHUDA-approved layout."),
         ],
     },
     {
@@ -211,7 +211,7 @@ POSTS = [
         "meta": "East-facing or west-facing house in Anantapur? Understand Vastu beliefs, sunlight, heat and layout differences to pick the right home facing for your family.",
         "lead": "House facing is one of the first questions Anantapur families ask. Here is a simple guide to east-facing and west-facing homes — Vastu, sunlight, heat and layout.",
         "image": "mss-villas-evening.jpg",
-        "image_alt": "West-facing duplex house at MSS Grandeur, Anantapur",
+        "image_alt": "West-facing duplex house at MSS Balaji Grandeur, Anantapur",
         "read": 5,
         "body": """
 <p>“Is it east-facing?” is often the very first question a family in Anantapur asks about a new home. Facing matters for Vastu, but also for practical reasons like sunlight and heat. Here is a balanced guide to help you choose.</p>
@@ -244,8 +244,8 @@ POSTS = [
   <li>How the staircase and toilets are positioned</li>
 </ol>
 
-<h2>Both options at MSS Grandeur</h2>
-<p>At <a href="{root}project.html">MSS Grandeur</a>, both 2 BHK and duplex homes are available in <strong>east-facing and west-facing</strong> versions, each with its own floor plan designed for that direction. That means you can choose the facing your family prefers without compromising on space:</p>
+<h2>Both options at MSS Balaji Grandeur</h2>
+<p>At <a href="{root}project.html">MSS Balaji Grandeur</a>, both 2 BHK and duplex homes are available in <strong>east-facing and west-facing</strong> versions, each with its own floor plan designed for that direction. That means you can choose the facing your family prefers without compromising on space:</p>
 <ul>
   <li><strong>2 BHK:</strong> 1,008 sq ft ground-floor plinth area in both facings</li>
   <li><strong>Duplex:</strong> 1,484 sq ft total in both facings (832 + 652 sq ft east-facing; 843 + 641 sq ft west-facing)</li>
@@ -255,35 +255,35 @@ POSTS = [
         "faq": [
             ("Is an east-facing house better than a west-facing house?",
              "East-facing homes are traditionally preferred in Vastu and get morning sun at the front. A west-facing home with a good layout is also considered good, and is often better value."),
-            ("Does MSS Grandeur have east-facing homes?",
-             "Yes. Both 2 BHK and duplex homes at MSS Grandeur are available in east-facing and west-facing options, each with its own floor plan."),
+            ("Does MSS Balaji Grandeur have east-facing homes?",
+             "Yes. Both 2 BHK and duplex homes at MSS Balaji Grandeur are available in east-facing and west-facing options, each with its own floor plan."),
             ("How do I reduce heat in a west-facing house in Anantapur?",
              "Use shaded balconies, light-coloured exterior paint, UPVC windows with tinted glass, trees or planters at the front and good cross-ventilation."),
         ],
     },
     {
-        "slug": "living-near-rudrampet-bypass-road-anantapur",
+        "slug": "living-near-kalyandurgam-road-anantapur",
         "category": "Locality guide",
-        "title": "Living Near Rudrampet Bypass Road, Anantapur: A Locality Guide",
-        "meta": "Thinking of buying a house near Rudrampet Bypass Road in Anantapur? Schools, hospitals, shopping and road connectivity close to MSS Grandeur.",
-        "lead": "Location decides your daily life — the school run, hospital access, groceries and your commute. Here is what living near Rudrampet Bypass Road in Anantapur looks like.",
+        "title": "Living Near Kalyandurgam Road, Anantapur: A Locality Guide",
+        "meta": "Thinking of buying a house on Kalyandurgam Road in Anantapur? Schools, hospitals, shopping and road connectivity close to MSS Balaji Grandeur.",
+        "lead": "Location decides your daily life — the school run, hospital access, groceries and your commute. Here is what living on Kalyandurgam Road in Anantapur looks like.",
         "image": "mss-hero-duplex.jpg",
-        "image_alt": "Row of homes along a wide CC road at MSS Grandeur, Anantapur",
+        "image_alt": "Row of homes along a wide CC road at MSS Balaji Grandeur, Anantapur",
         "read": 4,
         "body": """
-<p>When you buy a home, you are also choosing a neighbourhood. MSS Grandeur is located <strong>near Rudrampet Bypass Road, opposite Red Pepper Hotel, Anantapur</strong> — an area that combines a calmer residential setting with quick access to the city's main roads.</p>
+<p>When you buy a home, you are also choosing a neighbourhood. MSS Balaji Grandeur is located <strong>on Kalyandurgam Road, near Intell College, Anantapur</strong> — an area that combines a calmer residential setting with quick access to the city's main roads.</p>
 
 <h2>Road connectivity</h2>
 <p>The area is well connected to Anantapur's main routes:</p>
 <ul>
   <li><strong>Anantapur–Bangalore Highway</strong> for travel towards Bengaluru and the rest of the city</li>
-  <li><strong>Kalyandurg Road</strong> for the eastern side of town</li>
+  <li><strong>Kalyandurgam Road</strong> itself, for the eastern side of town</li>
   <li><strong>Bellary Road</strong> for travel towards Bellary</li>
 </ul>
 <p>Good road access matters for daily office travel, and for relatives visiting from other towns.</p>
 
 <h2>Schools and colleges nearby</h2>
-<p>Families with children often choose a home based on school access. Nearby institutions include <strong>Delhi Public School</strong> and <strong>Intell College</strong>.</p>
+<p>Families with children often choose a home based on school access. <strong>Intell College</strong> is right next to the project, and <strong>Delhi Public School</strong> is nearby.</p>
 
 <h2>Hospitals</h2>
 <p><strong>KIMS Hospital</strong> is among the healthcare options in the surrounding area — important for families with elderly parents or young children.</p>
@@ -304,15 +304,15 @@ POSTS = [
 <p>MSS Builders has been building homes in Anantapur for 15 years. Its completed projects include Balaji Villas Phase 1 on Kalyandurgam Road, Balaji Villas Phase 2 on SK University Road, and MSS Balaji Grandeur 1 and 2 at Aravakuru.</p>
 
 <h2>Check the location yourself</h2>
-<p>Before buying any home, drive the route you will use every day — to work, to your children's school and to the nearest hospital — at the time you would normally travel. Call <a href="tel:+919297975656">92979 75656</a> for directions to MSS Grandeur, or <a href="{root}contact.html">send us an enquiry</a> to plan a site visit.</p>
+<p>Before buying any home, drive the route you will use every day — to work, to your children's school and to the nearest hospital — at the time you would normally travel. Call <a href="tel:+919297975656">92979 75656</a> for directions to MSS Balaji Grandeur, or <a href="{root}contact.html">send us an enquiry</a> to plan a site visit.</p>
 """,
         "faq": [
-            ("Where exactly is MSS Grandeur located?",
-             "MSS Grandeur is near Rudrampet Bypass Road, opposite Red Pepper Hotel, Anantapur, Andhra Pradesh."),
-            ("Which schools are near MSS Grandeur?",
-             "Delhi Public School and Intell College are among the educational institutions in the surrounding area."),
-            ("Which main roads connect to MSS Grandeur?",
-             "The area connects to the Anantapur–Bangalore Highway, Kalyandurg Road and Bellary Road."),
+            ("Where exactly is MSS Balaji Grandeur located?",
+             "MSS Balaji Grandeur is on Kalyandurgam Road, near Intell College, Anantapur, Andhra Pradesh."),
+            ("Which schools are near MSS Balaji Grandeur?",
+             "Intell College is right next to the project, and Delhi Public School is nearby."),
+            ("Which main roads connect to MSS Balaji Grandeur?",
+             "The project is on Kalyandurgam Road, which connects to the Anantapur–Bangalore Highway and Bellary Road."),
         ],
     },
 ]

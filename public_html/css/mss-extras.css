@@ -1,4 +1,4 @@
-/* MSS Grandeur additions: brochure script accent, journey hover, careers page */
+/* MSS Balaji Grandeur additions: brochure script accent, journey hover, careers page */
 
 /* Palette: Midnight · Antique Gold · Ivory · White · Forest Green */
 :root {
@@ -1519,7 +1519,6 @@
   left: auto;
   right: -1rem;
 }
-
 .mss-xp-copy {
   position: relative;
 }
@@ -1750,7 +1749,9 @@
     height: clamp(15rem, 62vw, 20rem);
   }
 
-  .mss-xp-media::before {
+  .mss-xp-media::before,
+  .apc-explore::before,
+  .apc-explore::after {
     display: none;
   }
 }
