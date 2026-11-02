@@ -1791,3 +1791,250 @@
 .mss-gold-btn:hover::after {
   transform: translateX(120%);
 }
+
+/* Lead form success confirmation (centered card) */
+.lead-success {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  background: rgba(11, 22, 38, 0.45);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  cursor: pointer;
+}
+
+.lead-success[hidden] {
+  display: none;
+}
+
+.lead-success.is-visible {
+  opacity: 1;
+}
+
+.lead-success-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(100%, 340px);
+  padding: 2rem 1.5rem 1.5rem;
+  border-radius: 20px;
+  background: #fff;
+  color: #0b1626;
+  text-align: center;
+  box-shadow: 0 24px 60px rgba(11, 22, 38, 0.28);
+  transform: translateY(12px) scale(0.94);
+  transition: transform 0.3s cubic-bezier(0.2, 1.2, 0.4, 1);
+}
+
+.lead-success.is-visible .lead-success-card {
+  transform: none;
+}
+
+.lead-success-mark {
+  position: relative;
+  width: 76px;
+  height: 76px;
+  margin-bottom: 1.25rem;
+}
+
+.lead-success-mark::before {
+  content: "";
+  position: absolute;
+  inset: -12px;
+  border-radius: 50%;
+  border: 3px solid rgba(46, 125, 50, 0.3);
+  opacity: 0;
+}
+
+.is-visible .lead-success-mark::before {
+  animation: lead-success-ring 1s 0.2s ease-out forwards;
+}
+
+.lead-success-badge {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #2e7d32;
+  box-shadow: 0 10px 24px rgba(46, 125, 50, 0.35);
+  transform: scale(0.3);
+}
+
+.is-visible .lead-success-badge {
+  animation: lead-success-pop 0.5s cubic-bezier(0.2, 1.4, 0.4, 1) forwards;
+}
+
+.lead-success-badge svg {
+  width: 46px;
+  height: 46px;
+}
+
+.lead-success-tick {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 5.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 34;
+  stroke-dashoffset: 34;
+}
+
+.is-visible .lead-success-tick {
+  animation: lead-success-draw 0.4s 0.35s ease-out forwards;
+}
+
+.lead-success-burst span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  margin: -4px;
+  border-radius: 50%;
+  background: rgba(46, 125, 50, 0.55);
+  opacity: 0;
+}
+
+.lead-success-burst span:nth-child(even) {
+  width: 6px;
+  height: 6px;
+  margin: -3px;
+  background: #8fd694;
+}
+
+.is-visible .lead-success-burst span {
+  animation: lead-success-burst 0.9s 0.3s ease-out forwards;
+}
+
+.lead-success-title {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #0b1626;
+}
+
+.lead-success-time {
+  margin: 0.3rem 0 0;
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.lead-success-note {
+  margin: 0.85rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #334155;
+}
+
+.lead-success-title,
+.lead-success-time,
+.lead-success-note,
+.lead-success-close {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.is-visible .lead-success-title,
+.is-visible .lead-success-time,
+.is-visible .lead-success-note,
+.is-visible .lead-success-close {
+  animation: lead-success-rise 0.4s 0.45s ease-out forwards;
+}
+
+.is-visible .lead-success-note,
+.is-visible .lead-success-close {
+  animation-delay: 0.6s;
+}
+
+.lead-success-close {
+  width: 100%;
+  margin-top: 1.4rem;
+  padding: 0.75rem 1.5rem;
+  border: 0;
+  border-radius: 999px;
+  background: #2e7d32;
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.lead-success-close:hover,
+.lead-success-close:focus-visible {
+  background: #23662a;
+  outline: 3px solid rgba(46, 125, 50, 0.3);
+  outline-offset: 2px;
+}
+
+@keyframes lead-success-pop {
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes lead-success-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes lead-success-ring {
+  0% {
+    opacity: 0.9;
+    transform: scale(0.7);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+
+@keyframes lead-success-burst {
+  0% {
+    opacity: 0;
+    transform: rotate(var(--a)) translateY(-44px) scale(0.4);
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(var(--a)) translateY(-96px) scale(1);
+  }
+}
+
+@keyframes lead-success-rise {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lead-success,
+  .lead-success * {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .lead-success-card,
+  .lead-success-badge,
+  .lead-success-title,
+  .lead-success-time,
+  .lead-success-note,
+  .lead-success-close {
+    opacity: 1;
+    transform: none;
+  }
+
+  .lead-success-tick {
+    stroke-dashoffset: 0;
+  }
+}

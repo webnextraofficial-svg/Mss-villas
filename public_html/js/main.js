@@ -658,6 +658,152 @@
     }
   }
 
+  /* Full-screen success confirmation + chime after any lead form is sent */
+  var successAudio = null;
+  var successEl = null;
+  var successTimer = null;
+  var successReturnFocus = null;
+  var MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+  /* Browsers only allow audio that starts inside a user gesture, so unlock it on submit */
+  function primeSuccessSound() {
+    var Ctx = window.AudioContext || window.webkitAudioContext;
+    if (!Ctx) return;
+    try {
+      if (!successAudio) successAudio = new Ctx();
+      if (successAudio.state === "suspended") successAudio.resume();
+    } catch (err) {
+      successAudio = null;
+    }
+  }
+
+  function playSuccessSound() {
+    var ctx = successAudio;
+    if (!ctx) return;
+    var start = ctx.currentTime + 0.05;
+    function tone(freq, at, dur, peak) {
+      var osc = ctx.createOscillator();
+      var gain = ctx.createGain();
+      osc.type = "sine";
+      osc.frequency.setValueAtTime(freq, at);
+      gain.gain.setValueAtTime(0.0001, at);
+      gain.gain.exponentialRampToValueAtTime(peak, at + 0.015);
+      gain.gain.exponentialRampToValueAtTime(0.0001, at + dur);
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.start(at);
+      osc.stop(at + dur + 0.05);
+    }
+    try {
+      tone(1046.5, start, 0.5, 0.22);
+      tone(2093, start, 0.3, 0.05);
+      tone(1568, start + 0.12, 0.9, 0.24);
+      tone(3136, start + 0.12, 0.5, 0.04);
+    } catch (err) {}
+  }
+
+  function pad2(n) {
+    return (n < 10 ? "0" : "") + n;
+  }
+
+  function formatSuccessTime(d) {
+    var h = d.getHours();
+    var ampm = h >= 12 ? "pm" : "am";
+    h = h % 12 || 12;
+    return (
+      pad2(h) + ":" + pad2(d.getMinutes()) + " " + ampm + " on " +
+      d.getDate() + " " + MONTHS[d.getMonth()] + " " + d.getFullYear()
+    );
+  }
+
+  function successCopy(data) {
+    var first = String(data.name || "").trim().split(/\s+/)[0];
+    var thanks = first ? "Thank you, " + first + "! " : "Thank you! ";
+    var type = String(data.request_type || "").toLowerCase();
+    var source = String(data.source || "").toLowerCase();
+    if (type === "career application" || source.indexOf("career") === 0) {
+      return {
+        title: "Application submitted",
+        note: thanks + "The MSS Builders hiring team will call you shortly.",
+      };
+    }
+    if (type === "booking" || type.indexOf("site visit") !== -1 || source.indexOf("site-visit") === 0) {
+      return {
+        title: "Site visit request received",
+        note: thanks + "Our team will call you to confirm your visit time.",
+      };
+    }
+    return {
+      title: "Enquiry received",
+      note: thanks + "The MSS Balaji Grandeur team will contact you shortly.",
+    };
+  }
+
+  function hideLeadSuccess() {
+    if (!successEl || successEl.hidden) return;
+    clearTimeout(successTimer);
+    successEl.classList.remove("is-visible");
+    window.setTimeout(function () {
+      successEl.hidden = true;
+    }, 250);
+    if (successReturnFocus && document.contains(successReturnFocus)) {
+      try {
+        successReturnFocus.focus({ preventScroll: true });
+      } catch (err) {}
+    }
+  }
+
+  function buildLeadSuccess() {
+    var el = document.createElement("div");
+    el.className = "lead-success";
+    el.hidden = true;
+    el.setAttribute("role", "alertdialog");
+    el.setAttribute("aria-modal", "true");
+    el.setAttribute("aria-labelledby", "lead-success-title");
+    el.setAttribute("aria-describedby", "lead-success-note");
+    var dots = "";
+    for (var i = 0; i < 10; i++) dots += '<span style="--a:' + i * 36 + 'deg"></span>';
+    el.innerHTML =
+      '<div class="lead-success-card">' +
+      '<div class="lead-success-mark" aria-hidden="true">' +
+      '<div class="lead-success-burst">' + dots + "</div>" +
+      '<div class="lead-success-badge"><svg viewBox="0 0 52 52"><path class="lead-success-tick" d="M15 27l7.5 7.5L38 19"/></svg></div>' +
+      "</div>" +
+      '<h2 class="lead-success-title" id="lead-success-title"></h2>' +
+      '<p class="lead-success-time"></p>' +
+      '<p class="lead-success-note" id="lead-success-note"></p>' +
+      '<button type="button" class="lead-success-close">Done</button>' +
+      "</div>";
+    el.addEventListener("click", hideLeadSuccess);
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") hideLeadSuccess();
+    });
+    document.body.appendChild(el);
+    return el;
+  }
+
+  function showLeadSuccess(data) {
+    if (!successEl) successEl = buildLeadSuccess();
+    var copy = successCopy(data);
+    successEl.querySelector(".lead-success-title").textContent = copy.title;
+    successEl.querySelector(".lead-success-time").textContent = formatSuccessTime(new Date());
+    successEl.querySelector(".lead-success-note").textContent = copy.note;
+    successReturnFocus = document.activeElement;
+    successEl.classList.remove("is-visible");
+    successEl.hidden = false;
+    void successEl.offsetWidth;
+    successEl.classList.add("is-visible");
+    successEl.querySelector(".lead-success-close").focus({ preventScroll: true });
+    playSuccessSound();
+    if (navigator.vibrate) {
+      try {
+        navigator.vibrate([40, 60, 40]);
+      } catch (err) {}
+    }
+    clearTimeout(successTimer);
+    successTimer = window.setTimeout(hideLeadSuccess, 5000);
+  }
+
   function submitLead(form, data, statusEl, onSuccess) {
     var status = statusEl || getLeadStatusEl(form);
 
@@ -684,6 +830,7 @@
       btn.textContent = "Sending…";
     }
     status.textContent = "Sending your details…";
+    primeSuccessSound();
 
     data.page_url = window.location.href;
     attachLocation(form, data);
@@ -703,6 +850,7 @@
           "Thank you! The MSS Balaji Grandeur team will contact you shortly.";
         form.reset();
         clearFormLocation(form);
+        showLeadSuccess(data);
         if (typeof onSuccess === "function") onSuccess();
       })
       .catch(function () {
