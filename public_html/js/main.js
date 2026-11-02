@@ -425,7 +425,7 @@
 
   /* Lead submission → Google Apps Script (Sheet + email to MSS Builders inboxes) */
   var LEAD_ENDPOINT =
-    "https://script.google.com/macros/s/AKfycbwZsmVWXwgwKq6gJnGTGTtW1lYaoFq6JsgcUI5bjWahNHOfYF7CzaHQW-nEHi2f_on-/exec";
+    "https://script.google.com/macros/s/AKfycbyukia-__iVVyWhWkrFfTADmYd5JgzhdZwzmsobORdAg3eUshDOYXc7KDHbTDXVTvArOA/exec";
 
   function getLeadStatusEl(form) {
     var el = form.querySelector("[data-lead-status]");
